@@ -5,6 +5,15 @@
 </head>
 <body>
     <h1>Welcome to EveCore</h1>
-    <p>This is your Flask AI memory app on Azure.</p>
+    <form method="POST">
+        <input type="text" name="entry" placeholder="Say something to EveCore">
+        <button type="submit">Submit</button>
+    </form>
+    <h3>Memory Log:</h3>
+    <ul>
+        {% for item in memory %}
+        <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
